@@ -29,10 +29,10 @@ jobs:
         run: pip install pyinstaller
 
       - name: Gerar executável
-        run: pyinstaller --onefile main.py
+        run: pyinstaller --onefile --name Catcher main.py
 
       - name: Enviar artefato
         uses: actions/upload-artifact@v4
         with:
           name: catcher-windows-x64
-          path: dist/main.exe
+          path: dist/Catcher.exe
